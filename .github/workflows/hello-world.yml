@@ -26,6 +26,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Image
-        run: docher push brightstraining24fall.azurecr.io/mycontainer:latest
+        run: docker push brightstraining24fall.azurecr.io/mycontainer:latest
 
  
