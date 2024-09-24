@@ -29,6 +29,7 @@ jobs:
         run: docker push brightstraining24fall.azurecr.io/mycontainer:latest
 
       - name: Run Tests
+        working-directory: ./webapi/java
         run: mvn test
 
 
