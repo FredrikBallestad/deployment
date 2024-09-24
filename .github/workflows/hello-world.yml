@@ -41,6 +41,7 @@ jobs:
           containerAppEnvironment: env-fredrik-01
           acrUsername: ${{ secrets.DOCKER_USERNAME }}
           acrPassword: ${{ secrets.DOCKER_PASSWORD }}
+          location: "norway east"
 
       - name: Push Image
         run: docker push brightstraining24fall.azurecr.io/mycontainer:latest
