@@ -8,7 +8,7 @@ WORKDIR /app
 COPY pom.xml .
 
 # Copy the project source
-COPY webapi/java/src ./src
+COPY src src
 
 # Package the application
 RUN mvn clean package -DskipTests
