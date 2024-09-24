@@ -1,0 +1,19 @@
+name: Hello World Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+     - main
+jobs: 
+  build:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Hello World Step 
+        run: echo "Hello, World! Build pipeline is running." 
