@@ -4,16 +4,17 @@ on:
   push:
     branches:
       - main
-
   pull_request:
     branches:
-     - main
-jobs: 
+      - main
+
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Hello World Step 
-        run: echo "Hello, World! Build pipeline is running." 
+      - name: Hello World Step
+        run: echo "Hello, World! Build pipeline is running."
+ 
