@@ -34,9 +34,13 @@ jobs:
       - name: Build and deploy Container App
         uses: azure/container-apps-deploy-action@v1
         with:
-          appSourcePath: ${{ github.workspace }}
-          acrName: mytestacr
-          containerAppEnvironment: my-test-container-app-env
+          containerAppName: myApp
+          resourceGroup: rg_Fredrik-test-01
+          imageToDeploy: brightstraining24fall.azurecr.io/mycontainer:latest
+          acrName: brhitgstrainingfall24
+          containerAppEnvironment: env-fredrik-01
+          acrUsername: ${{ secrets.DOCKER_USERNAME }}
+          acrPassword: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Image
         run: docker push brightstraining24fall.azurecr.io/mycontainer:latest
