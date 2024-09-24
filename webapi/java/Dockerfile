@@ -11,7 +11,7 @@ COPY pom.xml .
 COPY src src
 
 # Package the application
-RUN mvn clean package -DskipTests
+RUN mvn clean package
 
 # Use OpenJDK for the runtime image
 FROM eclipse-temurin:17-jre-alpine

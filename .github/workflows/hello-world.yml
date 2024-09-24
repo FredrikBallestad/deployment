@@ -28,5 +28,8 @@ jobs:
       - name: Push Image
         run: docker push brightstraining24fall.azurecr.io/mycontainer:latest
 
+      - name: Run Tests
+        run: mvn test
+
 
  
