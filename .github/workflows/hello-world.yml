@@ -32,8 +32,8 @@ jobs:
           context: .
           push: true
           tags: |
-            brightstraining24fall.azurecr.io/fredrik/spring-app:latest
-            brightstraining24fall.azurecr.io/fredrik/spring-app:${{ github.sha }}
+            brightstraining24fall.azurecr.io/fredrik/mycontainer:latest
+            brightstraining24fall.azurecr.io/fredrik/mycontainer:${{ github.sha }}
 
       - name: Hello World Step
         run: echo "Hello, World! Build pipeline is running."
