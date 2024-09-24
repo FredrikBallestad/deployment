@@ -28,12 +28,14 @@ jobs:
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
-        with: 
-          context: ./brights-webapi/java/src
+        with:
+          context: ./brights-webapi/java
+          file: ./brights-webapi/java/src/Dockerfile
           push: true
           tags: |
             brightstraining24fall.azurecr.io/fredrik/mycontainer:latest
             brightstraining24fall.azurecr.io/fredrik/mycontainer:${{ github.sha }}
+
 
       - name: Hello World Step
         run: echo "Hello, World! Build pipeline is running."
