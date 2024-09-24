@@ -8,7 +8,7 @@ WORKDIR /app
 COPY pom.xml .
 
 # Copy the project source
-COPY brights-webapi/java/src ./src
+COPY webapi/java/src ./src
 
 # Package the application
 RUN mvn clean package -DskipTests
