@@ -15,6 +15,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin' # Install Java from Eclipse Temurin
+          java-version: '17'
+
       - name: Build Docker Image
         run: docker build -t brightstraining24fall.azurecr.io/mycontainer:latest ./webapi/java
 
